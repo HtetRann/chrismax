@@ -175,6 +175,7 @@
     transform-origin:50% 100%;
     transform:rotateY(var(--box-rot));
   }
+  
   .boxFace{
     transform-style: preserve-3d;
     position:absolute;
@@ -409,6 +410,19 @@
   }
   50%{
     transform:scale(var(--star-scale));
+  }
+}
+
+@media (max-width: 768px) {
+  .fullGroup {
+    --w: 150px; /* Smaller width */
+    --h: 300px; /* Smaller height */
+  }
+  .text1 {
+    font-size: 20px; /* Smaller text size for "Click Me" */
+  }
+  .text2 {
+    font-size: 30px; /* Smaller text size for "Merry Christmas!" */
   }
 }
 </style>
