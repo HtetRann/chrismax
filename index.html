@@ -481,5 +481,26 @@
   <div class='text text1'> Click Me </div>
   <div class='text text2'> Merry Christmas! </div>
 </div>
+<script>
+  const fullGroup = document.querySelector('.fullGroup');
+  let treeVisible = false;
 
+  fullGroup.addEventListener('click', () => {
+    treeVisible = !treeVisible;
+
+    if (treeVisible) {
+      // Show the tree and open the box
+      fullGroup.style.setProperty('--scale', '1');
+      fullGroup.style.setProperty('--tree-up', '1');
+      fullGroup.style.setProperty('--box-rot', '30deg');
+      fullGroup.style.setProperty('--cover-open', '250deg');
+    } else {
+      // Hide the tree and close the box
+      fullGroup.style.setProperty('--scale', '0');
+      fullGroup.style.setProperty('--tree-up', '0');
+      fullGroup.style.setProperty('--box-rot', 'var(--rot-fixed)');
+      fullGroup.style.setProperty('--cover-open', '90deg');
+    }
+  });
+</script>
 
